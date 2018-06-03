@@ -1,5 +1,5 @@
 var slideIndex = [1,1];
-var slideId = ["mySlides1", "mySlides2"]
+var slideId = ["reminder__slides-1", "reminder__slides-2"]
 showSlides(1, 0);
 showSlides(1, 1);
 
@@ -19,27 +19,24 @@ function showSlides(n, no) {
 }
 
 
-$('#wireframe').addClass('reminder__nav-tab--current');
-$('#wireframe, #mockup, #tools').click(function() {
-    $('#wireframe, #mockup, #tools').removeClass('reminder__nav-tab--current')
+$('#js-wireframe').addClass('reminder__nav-tab--current');
+$('#js-wireframe, #js-mockup, #js-tools').click(function() {
+    $('#js-wireframe, #js-mockup, #js-tools').removeClass('reminder__nav-tab--current')
     $(this).addClass('reminder__nav-tab--current');
 });
 
 
-$('#wireframe').click(function(){
+$('#js-wireframe').click(function(){
     $('#js-wireframe-slide').addClass('show').removeClass('hide')
-    $('#js-mockup-slide').addClass('hide').removeClass('show')
-    $('#js-tools-slide').addClass('hide').removeClass('show')
+    $('#js-mockup-slide, #js-tools-slide').addClass('hide').removeClass('show')
 })
 
-$('#mockup').click(function(){
+$('#js-mockup').click(function(){
     $('#js-mockup-slide').addClass('show').removeClass('hide')
-    $('#js-wireframe-slide').addClass('hide').removeClass('show')
-    $('#js-tools-slide').addClass('hide').removeClass('show')
+    $('#js-wireframe-slide, #js-tools-slide').addClass('hide').removeClass('show')
 })
 
-$('#tools').click(function(){
+$('#js-tools').click(function(){
     $('#js-tools-slide').addClass('show').removeClass('hide')
-    $('#js-wireframe-slide').addClass('hide').removeClass('show')
-    $('#js-mockup-slide').addClass('hide').removeClass('show')
+    $('#js-mockup-slide, #js-wireframe-slide').addClass('hide').removeClass('show')
 })
